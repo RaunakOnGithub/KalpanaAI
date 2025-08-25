@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KalpanaAI - AI Image Generator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:wght@500&display=swap');
+    </style>
+    
+</head>
+
+<body class="bg-gradient-to-br from-gray-950 via-gray-900 to-black text-gray-100 min-h-screen flex items-center justify-center">
+  <!-- MAIN GENERATOR CARD -->
+  <section id="generator" class="w-full max-w-5xl mx-auto px-4 sm:px-6 py-10">
+    <div class="bg-gray-900/80 backdrop-blur-xl rounded-3xl shadow-2xl border border-gray-800 p-6 sm:p-10">
+      
+      <!-- Header -->
+      <div class="flex items-center gap-4 mb-8">
+        <div class="h-14 w-14 rounded-2xl bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg">
+          <i class="fa-solid fa-wand-magic-sparkles text-xl text-white"></i>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-wide font-pop">KalpanaAI</h2>
+      </div>
+
+      <!-- Form -->
+      <form class="prompt-form space-y-8">
+        <!-- Prompt Input -->
+        <div class="relative">
+          <textarea id="prompt-input" 
+            placeholder="Describe your imagination in detail..." 
+            class="w-full min-h-[140px] p-5 text-gray-100 rounded-2xl bg-gray-800/60 border border-gray-700 placeholder-gray-500 focus:ring-2 focus:ring-indigo-500 focus:outline-none resize-y"></textarea>
+          
+          <!-- Random Button -->
+          <button type="button" 
+            class="prompt-btn absolute bottom-4 right-4 h-12 w-12 rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white flex items-center justify-center shadow-md hover:scale-110 transition-transform">
+            <i class="fa-solid fa-dice"></i>
+          </button>
+        </div>
+
+        <!-- Options -->
+        <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+          <select id="model-select" class="rounded-xl bg-gray-800/60 border border-gray-700 p-3 focus:ring-2 focus:ring-indigo-500 w-full">
+            <option value="vyro">Kalpana AI</option>
+          </select>
+          <select id="image-count" class="rounded-xl bg-gray-800/60 border border-gray-700 p-3 focus:ring-2 focus:ring-indigo-500 w-full">
+            <option value="1">1 Image</option>
+            <option value="2">2 Images</option>
+            <option value="3">3 Images</option>
+            <option value="4">4 Images</option>
+          </select>
+          <select id="aspect-ratio" class="rounded-xl bg-gray-800/60 border border-gray-700 p-3 focus:ring-2 focus:ring-indigo-500 w-full">
+            <option value="1/1">Square (1:1)</option>
+            <option value="16/9">Landscape (16:9)</option>
+            <option value="9/16">Portrait (9:16)</option>
+          </select>
+          <button type="submit" 
+            class="generate-btn rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold px-6 py-3 flex items-center justify-center gap-2 hover:from-indigo-400 hover:to-purple-500 shadow-lg transition disabled:opacity-50">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            Generate
+          </button>
+        </div>
+
+        <!-- Gallery -->
+        <div class="gallery-grid mt-10 grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"></div>
+      </form>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"DM Sans"', 'sans-serif'], // make DM Sans the default
+          }
+        }
+      }
+    }
+  </script>
+  
+</body>
+</html>
