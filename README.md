@@ -2,7 +2,7 @@
 # 🌌 KalpanaAI - AI Image Generator
 
 KalpanaAI is a sleek and powerful **AI Image Generator** built with **HTML, Tailwind CSS, and JavaScript**.  
-It allows users to create stunning AI-generated images using prompts, customize settings, and switch between **Dark Mode & Light Mode** with a single click.  
+It allows users to create stunning AI-generated images using prompts, customize settings.  
 
 ---
 
