@@ -28,7 +28,8 @@ It allows users to create stunning AI-generated images using prompts, customize 
 - **Frontend:** HTML, Tailwind CSS  
 - **Icons:** Font Awesome  
 - **Scripting:** JavaScript  
-- ** Deployment:** Netlify 
+- **Deployment:** Netflix 
+
 ---
 
 ## 📦 Installation & Setup
